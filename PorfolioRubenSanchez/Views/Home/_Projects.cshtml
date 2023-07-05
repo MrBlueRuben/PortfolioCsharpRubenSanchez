@@ -1,0 +1,56 @@
+﻿
+@model IEnumerable<Project>
+
+
+@if (Model is not null)
+{
+    <section id="projects" class="full-height px-lg-5">
+        <div class="container">
+            <div class="row pb-4">
+                <div class="col-lg-8">
+                    <h6>WORK</h6>
+                    <h1 class="text-highlight">My Recent Projects</h1>
+                </div>
+            </div>
+            
+                <div class="row gy-4">
+                @foreach (var project in Model)
+                {
+                    <div class="col-md-6">
+                        <div class="card-custom shadow-effect rounded-2 bg-base">
+                            <div class="card-custom-image article rounded-2 ">
+                                <img src="@project.ImageURL" alt="project picture">
+                                <a href="@project.Link" target="_blank"><img src="@project.ImageHoverURL" alt="project picture"></a>
+                            </div>
+                            <div class="card-custom-content p-4  rounded-2">
+                                <h4>@project.Title</h4>
+                                <p class="mb-2 text-300">@project.Date</p>
+                                <p class="mb-0 text-400">@project.Description</p>
+                        
+                                    <div class="badges">
+                                      
+                                        <img alt="HTML5" src="https://img.shields.io/badge/html5-E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+                                        <img alt="CSS3" src="https://img.shields.io/badge/css3-1572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+                                        <img alt="tailwind css" src="https://img.shields.io/badge/tailwindcss-38B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white">
+                                        <img alt="React Js" src="https://img.shields.io/badge/-ReactJs-61DAFB.svg?style=for-the-badge&logo=react&logoColor=white">
+                                        <img alt="Ruby on Rails" src="https://img.shields.io/badge/RubyOnRails-CC0000.svg?style=for-the-badge&logo=rubyonrails&logoColor=black">
+                                        <img alt="PostgreSQL" src="https://img.shields.io/badge/postgresql-316192.svg?style=for-the-badge&logo=postgresql&logoColor=white">
+                                        <img alt="Heroku" src="https://img.shields.io/badge/heroku-430098.svg?style=for-the-badge&logo=heroku&logoColor=white">
+                                    </div>
+                                    <div class="col-12 text-center p-0 mt-4 link-to-projects text-700">
+                                        <a href="@project.Link" target="_blank"><i class="bi bi-link-45deg"></i></a>
+                                        <a href="@project.LinkGithub" target="_blank"><i class="bi bi-github"></i></a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+           
+            }
+         </div>
+    </section>
+}
+
+  
+                
+             
