@@ -22,9 +22,7 @@ namespace PorfolioRubenSanchez.Models
                     Description = "We met some of Lewagon's students and made this web app starting from scratch.",
                     Link = "http://filmoteca.herokuapp.com",
                     LinkGithub ="https://github.com/RdzYogi/filmoteca",
-                    IDictionary<string, string> badges =new Dictionary<string, string>();
-                        badges.add()
-
+                    
                 },
                  new Project
                 {

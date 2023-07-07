@@ -292,3 +292,14 @@ Articles
         color: var(--color-brand);
 
     }
+    /*Form*/
+    form{
+        position: relative;
+    }
+    .form-label{
+        position: absolute;
+        top: 1.4rem;
+        left: 1rem;
+
+
+    }
